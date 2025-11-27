@@ -1,0 +1,110 @@
+.add-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.add-button {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+
+    /* Allow multiline and automatic height */
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    white-space: normal;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    margin-top: 10px;
+}
+
+.add-button:hover {
+    background-color: #5a7b5e;
+    transform: scale(1.05);
+}
+
+/* Text hierarchy styles */
+.info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.info p {
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.info-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    /* Add spacing between the headline and the image */
+}
+
+.ingredient-image-box {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+/* Style for the description text */
+.info-description {
+    font-size: 18px;
+    /* Slightly larger font size */
+    line-height: 1.6;
+    /* Increase line spacing for better readability */
+    color: var(--color-primary);
+    /* Use the primary color for text */
+    text-align: left;
+    /* Align text to the left for a clean look */
+    margin: 20px 0;
+    /* Add vertical spacing around the description */
+    padding: 0;
+    /* Remove padding for a clean look */
+}
+
+/* Highlight specific keywords or phrases */
+.info-description span.highlight {
+    font-weight: bold;
+    font-size: large;
+    color: var(--color-primary);
+    /* Use a secondary color for highlights */
+}
+
+/* Add icons or decorations */
+.info-description span.icon {
+    margin-right: 5px;
+    color: var(--color-primary);
+    font-size: 16px;
+    vertical-align: middle;
+}

@@ -1,0 +1,325 @@
+.menu {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-box {
+  flex-grow: 1;
+  /* background-color: var(--color-background); */
+  margin-top: 15px;
+}
+
+/* Style for the menu-description */
+.menu-description {
+  text-align: center;
+  padding: 10px;
+}
+
+.menu-description h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  /* Use primary color */
+  margin-bottom: 10px;
+}
+
+.menu-description p {
+  font-size: 1rem;
+  color: #555;
+  /* Subtle text color */
+  line-height: 1.5;
+}
+
+/* Menu header */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  /* Change from center to space-between */
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  padding: 0;
+  height: 60px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Menu tab header buttons */
+.menu-tab-header {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+/* Hover effect for menu-tab-header */
+.menu-tab-header:hover {
+  background-color: var(--color-secondary);
+  color: var(--text-color);
+  text-decoration: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0px 0px;
+}
+
+/* Active tab styling */
+.menu-tab-header.active {
+  background-color: var(--color-secondary);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px 8px 0px 0px;
+}
+
+/* Categories */
+.menu-categories {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+
+.menu-pictures {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+  border-top: none;
+  padding-top: 10px;
+  /* Add spacing above the menu items */
+}
+
+.menu-tab {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px 0;
+  /* Add more padding to the top and bottom */
+  position: absolute;
+  top: 100%;
+  /* Position the dropdown below the button */
+  left: 50%;
+  /* Center horizontally relative to the parent */
+  transform: translateX(-50%);
+  /* Adjust to center */
+  z-index: 100;
+  min-width: 100%;
+  /* Make the dropdown as wide as the button */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  /* Ensure padding doesn't affect width */
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 16px 24px;
+  /* Increase padding for more spacing */
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  /* Center-align text */
+  font-size: 1.1rem;
+  /* Slightly larger font for better readability */
+  color: #333;
+  /* Ensure text color is clear */
+  background: none;
+  /* Ensure no background by default */
+  border: none;
+  /* Remove any border */
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+  /* Add a subtle hover effect */
+  border-radius: 5px;
+  /* Add rounded corners to the hover effect */
+}
+
+/* Container for the menu pictures */
+.menu-pictures {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+/* Grid container for menu items */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2%;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Individual menu item */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  transform: translateY(-5px);
+  /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow on hover */
+}
+
+/* Image styling */
+.menu-item-image {
+  width: 100%;
+  /* Make the image fill the width of the box */
+  height: auto;
+  /* Maintain the aspect ratio */
+  max-height: 80%;
+  /* Prevent the image from exceeding the box height */
+  object-fit: cover;
+  /* Ensure the image fits within the box */
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+  /* Smooth zoom effect */
+}
+
+/* Zoom effect on image hover */
+.menu-item:hover .menu-item-image {
+  transform: scale(1.1);
+  /* Slight zoom on hover */
+}
+
+/* Text styling */
+.menu-item p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-pictures h3 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* Order Buttons */
+.button-group {
+  margin-top: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-green,
+.btn-blue {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn-green {
+  background-color: #a3e4a3;
+}
+
+.btn-blue {
+  background-color: #a3d0f4;
+}
+
+.btn-green:hover {
+  background-color: #89d489;
+}
+
+.btn-blue:hover {
+  background-color: #89bce4;
+}
+
+
+
+/* Adjust layout for tablets (below 768px) */
+@media (max-width: 768px) {
+  .menu-items {
+    display: flex;
+    /* Use Flexbox for row alignment */
+    flex-direction: row;
+    /* Align items in rows */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 10px;
+    /* Add space between items */
+    justify-content: flex-start;
+    /* Align items to the left */
+  }
+
+  .menu-item {
+    flex: 0 1 calc(50% - 10px);
+    /* Each item takes 50% of the row minus the gap */
+    max-width: calc(50% - 10px);
+    /* Prevent items from exceeding 50% of the row */
+  }
+}
+
+/* Adjust layout for mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .menu-items {
+    display: flex;
+    /* Use Flexbox for row alignment */
+    flex-direction: column;
+    /* Stack items vertically */
+    gap: 10px;
+    /* Add space between items */
+    justify-content: flex-start;
+    /* Align items to the left */
+  }
+
+  .menu-item {
+    flex: 0 1 100%;
+    /* Each item takes the full width of the row */
+    max-width: 100%;
+    /* Prevent items from exceeding the full width */
+  }
+}

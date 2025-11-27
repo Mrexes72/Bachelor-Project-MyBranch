@@ -1,0 +1,297 @@
+.image-management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.upload-section input,
+.upload-section button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-section button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.management-header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.refresh-button-image-management {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    background-color: #2196F3;
+    color: white;
+}
+
+.refresh-button-menu-management:hover {
+    background-color: #1E88E5;
+}
+
+
+.gallery-section {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uploaded-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.uploaded-image:hover {
+    transform: scale(1.05);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.fullscreen-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.image-item.selected {
+    border: 2px solid black;
+    padding: 10px;
+    position: relative;
+}
+
+.delete-bar {
+    /* Add spacing above the button */
+    width: 100%;
+    /* Ensure full width */
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.maximize-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.maximize-button:hover {
+    background-color: darkblue;
+}
+
+.carousel-button {
+    margin-top: 5px;
+    /* Add spacing below the delete button */
+    padding: 10px;
+    width: 100%;
+    /* Ensure full width */
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #0056b3;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery-section {
+    flex: 3;
+    /* Main gallery takes more space */
+}
+
+.carousel-section {
+    flex: 1;
+    background-color: #eef6ff;
+    /* Faint blue background for carousel */
+    padding: 15px;
+    border: 1px solid #007bff;
+    /* Highlighted border for carousel */
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.carousel-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 20px;
+    /* Space between grid items */
+    margin-top: 20px;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Make the image take the full width of the grid item */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    .carousel-list {
+        grid-template-columns: 1fr;
+        /* 1 column on smaller screens */
+    }
+}

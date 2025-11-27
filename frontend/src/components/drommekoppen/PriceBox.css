@@ -1,0 +1,13 @@
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.dashed-line {
+    border-bottom: 1px dashed var(--text-color);
+}

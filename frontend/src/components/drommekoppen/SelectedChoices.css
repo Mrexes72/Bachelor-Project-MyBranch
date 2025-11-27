@@ -1,0 +1,111 @@
+/* Grid layout for selected ingredients */
+.selected-ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+    max-width: 100%;
+    gap: 20px;
+    width: 100%;
+}
+
+.selected-ingredients-grid .ingredient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 8px solid;
+    border-radius: 20px;
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-width: 0;
+    /* Allow text to shrink if needed */
+}
+
+/* Style for the text inside the ingredient item */
+.selected-ingredients-grid .ingredient-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+    flex: 1;
+}
+
+/* Style for the remove button */
+.selected-ingredients-grid .ingredient-item .remove-button {
+    min-width: 24px;
+    height: 24px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.selected-ingredients-grid .ingredient-item .remove-button:hover {
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Ensure the .box.valg container handles overflow properly */
+.box.valg {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1200px) {
+    .selected-ingredients-grid {
+        /* Allow 3 items per row at this breakpoint */
+        grid-template-columns: repeat(3, minmax(130px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .selected-ingredients-grid {
+        /* Allow 2 items per row at this breakpoint */
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .selected-ingredients-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .selected-ingredients-grid .ingredient-item {
+        padding: 10px;
+        border-width: 6px;
+    }
+
+    .selected-ingredients-grid .ingredient-item span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .selected-ingredients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .selected-ingredients-grid .ingredient-item {
+        padding: 8px;
+        border-width: 4px;
+    }
+
+    .selected-ingredients-grid .ingredient-item span {
+        font-size: 12px;
+    }
+}

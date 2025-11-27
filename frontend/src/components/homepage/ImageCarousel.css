@@ -1,0 +1,25 @@
+.carousel-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 10%;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    margin: 50px auto 0;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05); /* Zoom inn bildet ved hover */
+    opacity: 0.9; /* Gjør bildet litt gjennomsiktig */
+}
+
+.slick-slide {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.slick-list{
+    margin: 0 -10px;
+}

@@ -1,0 +1,158 @@
+/* Modal container */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-view-drinks {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    /* Increase width to 90% of the viewport */
+    max-width: 1200px;
+    /* Set a maximum width */
+    max-height: 90%;
+    /* Limit the height to 90% of the viewport */
+    overflow-y: auto;
+    /* Add vertical scrolling if content overflows */
+    position: relative;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Search input */
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Drinks table */
+.drinks-table {
+    width: 100%;
+    /* Ensure the table takes up the full width of the modal */
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+    /* Add horizontal scrolling for the table if needed */
+}
+
+.drinks-table th,
+.drinks-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.drinks-table th {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.drinks-table th:hover {
+    background-color: #e0e0e0;
+}
+
+/* Drink row */
+.drink-row {
+    height: 60px;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.drink-row:hover {
+    background-color: #f5f5f5;
+}
+
+.drink-image {
+    width: 100px;
+    /* Set a fixed width */
+    height: 100px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensure the image fits within the dimensions */
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Upvote button */
+.upvote-button {
+    padding: 5px 10px;
+    width: 80px;
+    background-color: #5a7b5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upvote-button:hover {
+    background-color: #4a6b4e;
+}
+
+.upvote-button.remove {
+    background-color: #d9534f;
+    /* Red for "Remove Upvote" */
+}
+
+.upvote-button.remove:hover {
+    background-color: #c9302c;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+    background-color: #5a7b5e;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #ccc;
+}

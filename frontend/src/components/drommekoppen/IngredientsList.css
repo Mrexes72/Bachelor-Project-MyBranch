@@ -1,0 +1,297 @@
+.default-theme {
+    background-color: var(--color-background);
+    color: inherit;
+}
+
+/* Custom theme styles */
+.custom-theme {
+    background-color: var(--color-background);
+    color: var(--text-color);
+}
+
+.no-category-message {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.ingredients-sidebar {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    /* Take up full height of parent */
+    min-height: 0;
+    /* Override previous min-height setting */
+    max-height: none;
+    gap: 10px 20px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-secondary);
+    border-width: 6px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-style: solid;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.ingredients-category-list {
+    flex: 1;
+    border-right: 2px solid var(--color-primary);
+    padding: 0;
+}
+
+.ingredients-ingredient-cards {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px;
+    justify-content: center;
+    overflow-y: visible;
+    /* Change from auto to visible */
+    height: auto;
+    /* Use auto height instead of calculated */
+    padding: 10px;
+}
+
+.ingredients-ingredient-card {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    border: var(--color-primary) 2px solid;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredients-ingredient-cards.no-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center the text vertically and horizontally */
+    height: 100%;
+    /* Ensure it takes up the full height */
+}
+
+.ingredient-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop the image to fill the card */
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    /* Add a shadow */
+}
+
+.ingredients-ingredient-card h4 {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background for text */
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+    /* Ensure text is above the image */
+}
+
+.ingredients-ingredient-card:hover {
+    transform: scale(1.1);
+    /* Enlarge the card on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    /* Add a shadow */
+    z-index: 10;
+    /* Bring the card to the front */
+}
+
+.ingredients-ingredient-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay for better text visibility */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+    z-index: 1;
+    /* Place the overlay below the text */
+}
+
+.ingredients-ingredient-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Lighten the overlay on hover */
+}
+
+.ingredients-category-section {
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ingredients-category-section:hover {
+    background-color: #5a7b5e;
+}
+
+.ingredients-category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.ingredients-arrow-icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.ingredients-category-section.open .ingredients-arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.ingredients-ingredient-list {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+}
+
+.ingredients-ingredient-list.show {
+    display: grid;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+
+/* Responsive styles for smaller screens */
+
+@media (max-width: 1200px) {
+
+    .ingredients-sidebar {
+        height: auto;
+        /* Allow natural height in stacked layout */
+        min-height: 400px;
+        /* Provide minimum height when stacked */
+    }
+
+    .sidebar-drommekoppen-component {
+        height: auto;
+    }
+
+    .ingredients-category-list {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .ingredients-ingredient-list.show {
+        display: grid;
+        gap: 15px;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        padding: 40px;
+        background-color: var(--color-secondary);
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+
+        /* Center the grid items */
+        grid-template-columns: repeat(3, minmax(130px, 1fr));
+        justify-items: center;
+        align-items: center;
+    }
+
+    .ingredients-ingredient-card {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .ingredient-image {
+        object-fit: cover;
+        width: 130px;
+        height: 130px;
+    }
+
+    .ingredients-ingredient-card h4 {
+        font-size: 0.8rem;
+    }
+
+    .ingredients-category-section {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        /* More space between category sections */
+        padding: 12px 15px;
+        /* Slightly larger touch target */
+    }
+
+    .ingredients-category-title {
+        margin-bottom: 10px;
+    }
+
+    .ingredients-arrow-icon {
+        align-self: flex-end;
+    }
+}
+
+/* For smaller screens, reduce to 2 columns */
+@media (max-width: 800px) {
+
+    .ingredients-ingredient-list.show {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+    }
+}
+
+/* For very small screens */
+@media (max-width: 500px) {
+    .ingredients-ingredient-card {
+        width: 110px;
+        /* Slightly smaller cards */
+        height: 110px;
+    }
+
+    .ingredients-ingredient-list.show {
+        grid-template-columns: repeat(2, 1fr);
+        /* Force 2 columns on very small screens */
+    }
+}

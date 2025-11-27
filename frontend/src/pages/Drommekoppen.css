@@ -1,0 +1,22 @@
+/* Ensure the parent container takes up the full height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+.drommekoppen-content {
+    flex: 1;
+    /* Pushes the footer to the bottom */
+}
+
+.drommekopp-content {
+    margin-top: 40px;
+}

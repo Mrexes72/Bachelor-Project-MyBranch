@@ -1,0 +1,287 @@
+.ingredients-management {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.ingredient-man-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.add-ingredient-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-ingredient-form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.management-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.management-header h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.management-header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button-ingredients-management,
+.refresh-button-ingredients-management {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-button-ingredients-management {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.add-button-ingredients-management:hover {
+    background-color: var(--color-secondary);
+    /* Slightly darker shade on hover */
+}
+
+.refresh-button-ingredients-management {
+    background-color: #2196F3;
+    /* Light blue color */
+    color: white;
+}
+
+.refresh-button-ingredients-management:hover {
+    background-color: #1E88E5;
+    /* Slightly darker blue on hover */
+}
+
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredient-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.ingredient-info {
+    flex: 1;
+}
+
+.ingredient-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 5px 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+}
+
+.ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 600px;
+    /* Ensures table doesn't get too squeezed */
+}
+
+.ingredients-table th,
+.ingredients-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.ingredients-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.ingredients-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.ingredient-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.ingredient-actions button {
+    padding: 6px 12px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .management-header-buttons {
+        flex-direction: row;
+    }
+
+    .add-button {
+        flex: 0 0 60%;
+    }
+
+    .refresh-button {
+        flex: 0 0 20%;
+    }
+
+    .search-input {
+        flex: 0 0 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    .management-header-buttons {
+        flex-direction: column;
+    }
+
+    .add-button,
+    .refresh-button,
+    .search-input {
+        width: 100%;
+    }
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.ingredient-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.edit-button,
+.delete-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.9;
+}
+
+/* Search input styles */
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1rem;
+    width: 100%;
+}

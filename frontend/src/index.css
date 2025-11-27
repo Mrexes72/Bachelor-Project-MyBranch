@@ -1,0 +1,64 @@
+:root {
+  --text-color: #0D1816;
+  --background-color: #FAFDFC;
+  --accent-color: #DBCFBD;
+  --primary-button-color: #65AEA9;
+  --secondary-button-color: #D2AABB;
+  --banner-bg-color: #efefef;
+
+  --color-primary: #44624a;
+  --color-secondary: #8ba888;
+  --color-tertiary: #c0cfb2;
+  --color-background: #eef1ec;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  padding: 10px 20px;
+  /* Default padding */
+  border: 2px solid transparent;
+  /* Default border */
+  border-radius: 8px;
+  /* Rounded corners */
+  font-size: 16px;
+  /* Standard font size */
+  font-weight: bold;
+  /* Bold text */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transitions */
+  text-align: center;
+  /* Center text */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  box-sizing: border-box;
+  /* Include padding and border in width/height */
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+button:active {
+  transform: scale(0.95);
+  /* Slight shrink effect on click */
+}

@@ -1,0 +1,72 @@
+/* General page layout */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Second Navbar */
+.admin-navbar {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-navbar button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+.admin-navbar button:hover {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.admin-navbar button.active {
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Content section */
+.admin-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    /* Ensure there's space between the navbar and content */
+}
+
+/* Error message */
+.error-message {
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-navbar {
+        flex-direction: column;
+    }
+
+    .admin-navbar button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .admin-content {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}

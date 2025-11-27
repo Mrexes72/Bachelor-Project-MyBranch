@@ -1,0 +1,225 @@
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.homepage {
+    /* font-family: Arial, sans-serif; */
+    text-align: center;
+    background-color: var(--background-color);
+    /* background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-tertiary)); */
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: auto;
+}
+
+
+.banner {
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    /* background-color: var(--color-tertiary); */
+    padding: 60px;
+
+}
+
+.banner h1 {
+    font-weight: bold;
+}
+
+.news-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    flex: 1;
+    flex-wrap: wrap;
+
+}
+
+.new-item {
+    width: calc(33.33% - 40px);
+    min-width: 250px;
+    margin: 20px;
+    font-size: 18px;
+    color: var(--text-color);
+    display: inline-block;
+    padding: 1rem;
+    border: var(--background-color) solid 8px;
+    border-radius: 60px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    /* Fixed typo: 6x → 6px */
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.new-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.social-links {
+    margin-top: -150px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navbar-button {
+    background-color: var(--primary-button-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-button:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.navbar-button:active {
+    background-color: var(--color-primary);
+}
+
+.menu-button,
+.dream-cup-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.new-item {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+
+/* Modified Media Queries for better responsiveness */
+@media (max-width: 1400px) {
+    .news-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-item {
+        width: 80%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    /* Make AboutUs section stack earlier too */
+    .about-us {
+        flex-direction: column !important;
+    }
+
+    .about-us-section {
+        width: 80% !important;
+        margin: 20px auto !important;
+    }
+}
+
+/* Additional tweaks for tablet-sized screens */
+@media (max-width: 900px) {
+    .new-item {
+        width: 90%;
+        margin: 20px auto;
+        padding-bottom: 80px;
+        /* Reduce bottom padding */
+    }
+
+    .banner {
+        padding: 40px;
+    }
+
+    .navbar-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: auto;
+        /* Don't force full width */
+        max-width: 180px;
+        /* Keep button width reasonable */
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .new-item {
+        width: 90%;
+        margin: 15px auto;
+        padding: 20px;
+        padding-bottom: 70px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .new-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .banner {
+        padding: 30px;
+        margin-top: 40px;
+    }
+
+    .navbar-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        /* Keep buttons reasonably sized */
+        width: auto;
+        /* Don't force full width */
+        max-width: 160px;
+        /* Limit maximum width */
+        margin: 10px auto;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .navbar-button {
+        padding: 8px 16px;
+        font-size: 14px;
+        /* Maintain size even on small screens */
+        width: auto;
+        /* Don't allow full width expansion */
+        max-width: 140px;
+        /* Further constrain width */
+        margin: 10px auto;
+    }
+
+    .new-item {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+        padding-bottom: 60px;
+        border-width: 5px;
+    }
+
+    .banner {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    /* Make social links more compact on small screens */
+    .social-links {
+        margin-top: -120px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-links a {
+        margin: 5px;
+    }
+}

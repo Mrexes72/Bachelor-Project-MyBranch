@@ -1,0 +1,204 @@
+.about-section {
+    display: flex;
+    justify-content: flex-start;
+    /* Start content from the left */
+    align-items: center;
+    background-color: var(--color-background);
+    color: #333;
+    padding: 60px 40px;
+    margin-top: 40px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Ensure full width */
+    box-sizing: border-box;
+}
+
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    /* Full width to center within the text area */
+}
+
+.about-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 0 20px;
+    /* Add padding for breathing room */
+    text-align: center;
+    /* Center text */
+}
+
+.about-section h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.about-image {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 10%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+    object-fit: cover;
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
+    align-self: center;
+    /* Center the image vertically */
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+    /* Subtle zoom effect on hover */
+}
+
+.about-section h3 {
+    font-size: 22px;
+    /* Slightly larger */
+    color: #4a4a4a;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+    margin: 16px 0;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+/* Responsive design */
+/* First breakpoint: start stacking earlier */
+@media (max-width: 1200px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .about-image {
+        width: 400px;
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 40px;
+        /* Add bottom margin instead */
+        order: -1;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .about-description {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .about-buttons {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* Medium screens - tablet */
+@media (max-width: 900px) {
+    .about-section {
+        padding: 40px 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .about-section h2 {
+        font-size: 1.8rem;
+        padding: 0.8rem;
+    }
+
+    .about-section p {
+        font-size: 17px;
+    }
+}
+
+/* Smaller tablets and mobile */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 25px;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+        padding: 0.6rem;
+    }
+
+    .about-section p {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .about-buttons button {
+        width: auto;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 25px 15px;
+    }
+
+    .about-image {
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+        margin-bottom: 12px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+}
